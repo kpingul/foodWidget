@@ -1,0 +1,23 @@
+
+
+	<ul>
+		<li ng-repeat="photo in images">
+	
+			<div class="view" style='background: url("{{photo.images.low_resolution.url}}")'>
+				<a ui-sref="user({img: photo.images.low_resolution.url, userimg: photo.user.profile_picture, location: photo.location.name, lng: photo.location.longitude, lat: photo.location.latitude})">
+				    <div class="overlay">
+				
+				      <span><i class="fa fa-heart"></i> {{photo.likes.count}} <br>{{photo.caption.text}}</span>
+
+				    </div>
+				  </a>
+			</div>
+		
+			
+			
+		</li>
+
+
+	</ul>
+
+
