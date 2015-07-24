@@ -33,6 +33,7 @@
 
 		}])
 
+
 		.factory('dataService', ['$http', function($http){
 
 
@@ -82,7 +83,7 @@
 
 			          center: myLatlng,
 
-			          zoom: 11
+			          zoom: 15
 			        };
 
 			        var map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -93,7 +94,7 @@
 			
 					var icon = {
 					    url:  this.url, // url
-					    scaledSize: new google.maps.Size(90, 90), // scaled size
+					    scaledSize: new google.maps.Size(60, 60), // scaled size
 					    origin: new google.maps.Point(0,0), // origin
 					    anchor: new google.maps.Point(0, 0) // anchor
 					};
@@ -140,6 +141,9 @@
 					console.log(data.data.data);
 					$scope.images = data.data.data;
 					$scope.photo = data.data.data[0].user.profile_picture;
+
+					//invokes plugin to work in effect ** place in directive
+					$('#da-thumbs > li').hoverdir();
 				},function(error){
 					console.log(error);
 				});
