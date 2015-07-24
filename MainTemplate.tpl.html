@@ -1,10 +1,11 @@
 
 
+
 <ul>
-	<li ng-repeat="photo in images">
+	<li ng-repeat="photo in images track by $index">
 
 		<div class="view" style='background: url("{{photo.images.low_resolution.url}}")'>
-			<a ui-sref="user({img: photo.images.low_resolution.url, userimg: photo.user.profile_picture, location: photo.location.name, lng: photo.location.longitude, lat: photo.location.latitude})">
+			<a ui-sref="photos({id: $index})">
 			    <div class="overlay">
 			
 			      <span><i class="fa fa-heart"></i> {{photo.likes.count}} <br>{{photo.caption.text}}</span>
@@ -21,3 +22,7 @@
 </ul>
 
 
+
+
+
+<!-- img: photo.images.low_resolution.url, userimg: photo.user.profile_picture, location: photo.location.name, lng: photo.location.longitude, lat: photo.location.latitude} -->
