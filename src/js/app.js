@@ -141,7 +141,7 @@
 					console.log(data.data.data);
 					$scope.images = data.data.data;
 					$scope.photo = data.data.data[0].user.profile_picture;
-
+					$scope.userId = data.data.data[0].user.username;
 					//invokes plugin to work in effect ** place in directive
 					$('#da-thumbs > li').hoverdir();
 				},function(error){

@@ -17,33 +17,30 @@ ul li {
     border-radius: 50%;
     height: 100px;
   }
-
-  @media (max-width: 449px){
-      ul li {
-  display: block;
-  margin-bottom: 2%;
+.fa-heart {
+  color: #FF0000;
 }
-
-
-  }
-
+.photo-count{
+  font-size: 1.3em;
+  display: inline;
+}
 
 /* Plugin CSS for Direct Aware Effect */
 
 .instaPhotos{
-  width: 90%;
+  width: 100%;
 }
 
 .da-thumbs {
   list-style: none;
   width: 100%;
   height: 600px;
-  position: relative;
-
+  
+  
   padding: 0;
 }
 .da-thumbs li {
-  float: left;
+
 
   background: #fff;
   
@@ -62,14 +59,14 @@ ul li {
   position: absolute;
   background: #333;
   background: rgba(75,75,75,0.7);
-  width: 90%;
+  width: 100%;
   height: 100%;
 }
 .da-thumbs li a div.custom-hover-object {
   position: absolute;
   background: #333;
   background: rgba(255,255,255,0.7);
-  width: 90%;
+  width: 100%;
   height: 100%;
 }
 .da-thumbs li a div span {
@@ -88,3 +85,21 @@ ul li {
   color: rgba(75,75,75,0.9);
   text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
   border-bottom: 1px solid rgba(0,0,0,0.5);
+
+}
+  
+
+/* 1st Breakpoint */
+
+
+@media (max-width: 449px){
+
+   ul li 
+   {
+      display: block;
+
+      margin-bottom:2%;
+  }
+
+
+}
