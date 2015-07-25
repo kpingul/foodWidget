@@ -61,8 +61,13 @@ gulp.task('depsCss', function(){
 
 gulp.task('scripts', function(){
 
-	return gulp.src('src/js/*.js')
-			.pipe(rename({suffix: '.min'}))
+	return gulp.src([
+
+				'src/js/app.js',
+				'src/js/app.routerConfig.js',
+				'src/js/**/*.js'
+			 ])
+			.pipe(concat('app.min.js'))
 			.pipe(uglify())
 			.pipe(gulp.dest('build/js'));
 });

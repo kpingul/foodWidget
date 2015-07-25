@@ -1,78 +1,114 @@
+body{
+  background: #131313;
+  font-family: 'Raleway', sans-serif;
+}
+.fade.ng-enter, .fade.ng-leave {
+    position: absolute;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
 
-ul {
+.fade.ng-enter {
+   -webkit-animation-name: fadeInDown;
+   animation-name: fadeInDown;
+}
+
+.fade.ng-leave {
+   -webkit-animation-name: fadeOutDown;
+   animation-name: fadeOutDown;
+}
+h3{
+  color: #fff;
+}
+ul 
+{
   list-style-type: none;
 }
-ul li {
+ul li 
+{
   display: inline-block;
-  padding: 10px;
+  padding: 0;
 }
-#map-canvas {
-        height: 450px;
-        width: 80%;
-        margin: 0 auto;
-        padding: 0;
-      }
+#map-canvas 
+{
+  height: 450px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
 
-  .user-photo{
-    border-radius: 50%;
-    height: 100px;
-  }
-.fa-heart {
+}
+
+.user-photo
+{
+  border-radius: 50%;
+  height: 100px;
+}
+
+.fa-heart 
+{
   color: #FF0000;
 }
-.photo-count{
+.photo-count
+{
   font-size: 1.3em;
-  display: inline;
+  display: 
 }
 
-/* Plugin CSS for Direct Aware Effect */
 
-.instaPhotos{
+/*  CSS for Direct Aware Effect */
+
+.instaPhotos
+{
   width: 100%;
 }
 
-.da-thumbs {
+.da-thumbs 
+{
   list-style: none;
   width: 100%;
   height: 600px;
   
-  
   padding: 0;
 }
-.da-thumbs li {
+.da-thumbs li 
+{
 
-
-  background: #fff;
-  
+  background: #131313;
   position: relative;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
+
 .da-thumbs li a,
-.da-thumbs li a img {
+.da-thumbs li a img 
+{
   display: block;
   position: relative;
 }
-.da-thumbs li a {
+.da-thumbs li a 
+{
   overflow: hidden;
 }
-.da-thumbs li a div {
+.da-thumbs li a div 
+{
   position: absolute;
   background: #333;
   background: rgba(75,75,75,0.7);
   width: 100%;
   height: 100%;
 }
-.da-thumbs li a div.custom-hover-object {
+.da-thumbs li a div.custom-hover-object
+ {
   position: absolute;
   background: #333;
   background: rgba(255,255,255,0.7);
   width: 100%;
   height: 100%;
 }
-.da-thumbs li a div span {
+.da-thumbs li a div span
+ {
   display: block;
   padding: 10px 0;
-  margin: 40px 20px 20px 20px;
+  margin: 100px 20px 20px 20px;
   text-transform: uppercase;
   font-weight: normal;
   color: rgba(255,255,255,0.9);
@@ -80,8 +116,10 @@ ul li {
   border-bottom: 1px solid rgba(255,255,255,0.5);
   box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
   text-align: center;
+
 }
-.da-thumbs li a div.custom-hover-object span {
+.da-thumbs li a div.custom-hover-object span 
+{
   color: rgba(75,75,75,0.9);
   text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
   border-bottom: 1px solid rgba(0,0,0,0.5);

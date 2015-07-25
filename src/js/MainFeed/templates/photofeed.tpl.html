@@ -1,0 +1,27 @@
+
+
+
+
+<center>
+
+	<ul id="da-thumbs" class="da-thumbs">
+
+		<li ng-repeat="photo in images track by $index">
+
+			<a  ui-sref="photos({id: $index})">
+
+				<img src="{{photo.images.low_resolution.url}}" class="instaPhotos" />
+
+				<div>
+
+					<span>{{photo.caption.text}}<br><i class="fa fa-heart fa-2x"></i> <b>{{photo.likes.count}}</b> </span>
+
+				</div>
+
+			</a>
+
+		</li>
+
+	</ul>
+
+</center>
