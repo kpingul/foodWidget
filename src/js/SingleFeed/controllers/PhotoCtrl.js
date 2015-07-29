@@ -18,7 +18,6 @@
 				dataService.getFeed().then( function(data){
 
 					vm.photo = data.data.data[$stateParams.id];
-
 					//cache values for better readability
 					mapService.setMap(vm.photo.location.latitude,vm.photo.location.longitude, vm.photo.images.thumbnail.url, vm.photo.location.name);
 
@@ -35,8 +34,6 @@
 
 				});
 
-
-					
 
 
 			}

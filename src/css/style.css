@@ -28,18 +28,53 @@ h3{
   padding: 0;
 }
 
-/* Map Canvas */
+/*Map Container */
+
+
 #map-canvas 
 {
-  height: 400px;
+  height: 320px;
   width: 100%;
   margin: 0 auto;
   padding: 0;
 
+
+}
+.nav-tabs li a{
+  color: #fff;
+  font-weight: bold;
 }
 
-/*Single Feed */
 
+.tab-photo{
+  width: 40%;
+  background: red;
+  float: left;
+}
+
+.tab-photo-details{
+  width: 40%;
+  float: right;
+  color: #fff;
+}
+
+.tab-photo-details-list{
+  list-style-type: none;
+}
+.tab-photo-details-list li{
+  font-size: 1.2em;
+  padding: 20px 0px;
+}
+
+.tab-photo-details-title{
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/*Single Feed */
+.user-container img{
+  border-radius: 50%;
+}
 .user-photo
 {
   border-radius: 50%;

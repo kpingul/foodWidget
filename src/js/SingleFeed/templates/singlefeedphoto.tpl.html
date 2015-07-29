@@ -17,9 +17,60 @@
 	</div>
 
 
-
 <div class="map-container">
-  <div id="map-canvas"></div>
+
+	<ul class="nav nav-tabs" role="tablist">
+
+	      <li role="presentation" class="active">
+
+	    	<a href="#standardFoodPhoto" id="maptab" activate-map aria-controls="home" role="tab" data-toggle="tab">Food Details</a>
+
+	    </li>
+
+	    <li role="presentation">
+
+	    	<a href="#mapview" id="maptab" activate-map aria-controls="home" role="tab" data-toggle="tab">Map View</a>
+
+	    </li>
+
+	 </ul>
+				 
+	<div class="tab-content">
 	
+		   <div role="tabpanel" class="tab-pane  fade in active "  id="standardFoodPhoto">
+	    		
+	    		<div class="tab-photo">
+	    			<img src="{{vm.photo.images.low_resolution.url}}"/>
+
+	    		</div>
+
+	    		<div class="tab-photo-details">
+					
+					<span class="tab-photo-details-title">{{vm.photo.caption.text | captionfilter}}</span>
+
+	    			<ul class="tab-photo-details-list">
+	    				<li ng-repeat="tag in vm.photo.tags">
+	    					
+	    					#{{tag}}
+	    				</li>
+	    			</ul>
+
+	    		</div>
+		 
+
+	    </div>
+
+	    <div role="tabpanel" class="tab-pane"  id="mapview">
+	    	
+		 	  <div id="map-canvas"></div>
+
+	    </div>
+
+	</div><!-- end of taab content -->
+ 
+
 	
-</div>
+</div><!-- end of map container -->
+
+ 
+  
