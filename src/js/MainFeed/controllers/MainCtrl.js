@@ -6,25 +6,36 @@
 
 		angular.module('myApp')
 
+			.controller('MainCtrl', MainCtrl);
 
-			.controller('MainCtrl', ['$scope', 'dataService', function($scope, dataService){
+			MainCtrl.$inject = ['$scope', 'dataService'];
+
+			function MainCtrl($scope, dataService){
+					
+					var vm = this;
+
+					dataService.getUserFeed(1015738).then( function(data){
+			
+					}, function(error){
+						console.log(error);
+					});
 
 					dataService.getFeed().then(function(data){
 
-						console.log(data.data.data);
+
 
 						//all photos from feed
-						$scope.images = data.data.data;
-
+						vm.images = data.data.data;
+						console.log(vm.images)
 						//user profile picture
-						$scope.photo = data.data.data[0].user.profile_picture;
+						vm.photo = data.data.data[0].user.profile_picture;
 
 						//username 
-						$scope.userId = data.data.data[0].user.username;
+						vm.userId = data.data.data[0].user.username;
 
 						//invokes plugin to work in effect 
 						// ****bad practice to manipulate dom in controller
-						$('#da-thumbs > li').hoverdir();
+			
 
 					},function(error){
 
@@ -32,7 +43,10 @@
 
 					});
 
-			}]);
+				
+
+			}
+
 
 
 

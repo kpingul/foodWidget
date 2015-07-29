@@ -14,7 +14,7 @@
 
 </head>
 
-<body ng-app="myApp" ng-controller="MainCtrl">
+<body ng-app="myApp" ng-controller="MainCtrl as vm">
 
 	<div class="container">
 		
@@ -28,19 +28,22 @@
 		     
 <!-- 		    <a ui-sref="home"><img class="user-photo" src="{{photo}}"></a> -->
 
-		      <a class="navbar-brand" ui-sref="home">{{userId | uppercase}}'s' Food Journey</a>
+		      <a class="navbar-brand" ui-sref="home">{{vm.userId | uppercase}}'s' Food Journey</a>
 
 		    </div>
 
 
 		  </div><!-- /.container-fluid -->
 
+
+
+
 		</nav><!-- end of nav -->
 
 
 
 		<div class="row">
-				<ui-view class="fade">
+				<ui-view>
 
 				</ui-view>
 		</div>
@@ -73,5 +76,8 @@
 <script src="src/js/shared/DateFilter.js"></script>
 <script src="src/js/MainFeed/controllers/MainCtrl.js"></script>
 <script src="src/js/SingleFeed/controllers/PhotoCtrl.js"></script>
+<script src="src/js/MainFeed/directives/effectHover.directive.js"></script>
+
+
 </body>
 </html>

@@ -11,16 +11,25 @@
 
 				function getFeed(){
 
-					var url = 'https://api.instagram.com/v1/users/self/feed?access_token=2078950030.1f5c74e.fa614065af4e484d92b96e91332850b0&callback=JSON_CALLBACK';
+					var url = 'https://api.instagram.com/v1/users/self/feed?access_token=2078950030.1f5c74e.fa614065af4e484d92b96e91332850b0&callback=JSON_CALLBACK&count=30';
 	        
 	       			return $http.jsonp(url); //returns promise
 
 				}
 
+				function getUserFeed(userId){
+
+					var url = "https://api.instagram.com/v1/users/" + userId + "/?access_token=2078950030.1f5c74e.fa614065af4e484d92b96e91332850b0&callback=JSON_CALLBACK"
+
+
+					return $http.jsonp(url);
+				}
+
 				
 				return {
 
-					getFeed: getFeed
+					getFeed: getFeed,
+					getUserFeed: getUserFeed
 
 				};
 

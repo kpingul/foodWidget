@@ -1,3 +1,25 @@
-	<center><h3>{{photo.location.name}} on {{photo.created_time | timefilter}}</h3></center>
-	
+	<center><h3>{{vm.photo.location.name}} on {{vm.photo.created_time | timefilter}}</h3></center>
+	<div class="user-like-container">
+		<span class="total-likes">Total Likes: {{vm.photo.likes.data.length}}</span>
+		<ul class="user-likes-list">
+			<li ng-repeat="user in vm.photo.likes.data">
+				<div class="user-container">
+					<h4>{{user.username}}</h4>
+					<img src="{{user.profile_picture}}">
+					
+				</div>
+				
+
+			</li>
+		</ul>
+
+		
+	</div>
+
+
+
+<div class="map-container">
   <div id="map-canvas"></div>
+	
+	
+</div>
