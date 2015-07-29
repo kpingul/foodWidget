@@ -27,7 +27,7 @@
 
 		
 	  			function initialize() {
-
+	
 					var myLatlng = new google.maps.LatLng(this.lat, this.lng);
 
 			        var mapOptions = {

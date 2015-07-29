@@ -22,11 +22,11 @@
 					mapService.setMap(vm.photo.location.latitude,vm.photo.location.longitude, vm.photo.images.thumbnail.url, vm.photo.location.name);
 
 					//gets map and initializes it to be viewed 
-					$timeout(function(){
+		
 						//delay to fully load map
-						mapService.getMap();
+		
 
-					}, 1000);
+				
 
 				}, function(error){
 
