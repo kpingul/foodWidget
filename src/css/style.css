@@ -174,9 +174,22 @@ h3{
   }
   .map-container{
 
-  width: 100%;
-  float: none;
-}
+    width: 100%;
+    float: none;
+  }
+
+
   
+
+}
+
+@media(max-width: 560px){
+    .breadcrumb li{
+      font-size: 0.8em;
+    }
+  .breadcrumb li a{
+
+     font-size: 1.2em;
+  }
 
 }
