@@ -16,7 +16,7 @@
 
 							url: '/',
 
-							templateUrl: 'src/js/MainFeed/templates/photofeed.tpl.html',
+							templateUrl: 'src/js/app/MainFeed/templates/photofeed.tpl.html',
 
 							controller: 'MainCtrl',
 
@@ -27,7 +27,7 @@
 
 							url: '/photos/:id',
 
-							templateUrl: 'src/js/SingleFeed/templates/singlefeedphoto.tpl.html',
+							templateUrl: 'src/js/app/SingleFeed/templates/singlefeedphoto.tpl.html',
 
 							controller: 'PhotoCtrl',
 

@@ -66,9 +66,9 @@ gulp.task('scripts', function(){
 
 	return gulp.src([
 
-				'src/js/app.js',
-				'src/js/app.routerConfig.js',
-				'src/js/**/*.js'
+				'src/js/app/app.js',
+				'src/js/app/app.routerConfig.js',
+				'src/js/app/**/*.js'
 			 ])
 			.pipe(concat('app.min.js'))
 			.pipe(uglify())
