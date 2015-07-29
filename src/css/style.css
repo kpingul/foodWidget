@@ -33,7 +33,7 @@ h3{
 
 #map-canvas 
 {
-  height: 320px;
+  height: 300px;
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -47,19 +47,23 @@ h3{
 
 
 .tab-photo{
-  width: 40%;
-  background: red;
+  width: 50%;
+
   float: left;
+}
+.tab-photo img{
+  width:100%;
 }
 
 .tab-photo-details{
-  width: 40%;
+  width: 30%;
   float: right;
   color: #fff;
 }
 
 .tab-photo-details-list{
   list-style-type: none;
+  padding: 0;
 }
 .tab-photo-details-list li{
   font-size: 1.2em;
@@ -225,6 +229,24 @@ h3{
   .breadcrumb li a{
 
      font-size: 1.2em;
+  }
+
+}
+
+@media(max-width: 450px){
+    .tab-photo-details{
+      margin-right: 2%;
+    }
+    .tab-photo-details-title{
+      font-size: 1em;
+    }
+  .tab-photo-details-list li{
+    font-size: 0.9em;
+   
+  }
+
+  #map-canvas{
+    height: 200px;
   }
 
 }

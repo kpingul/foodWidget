@@ -17,16 +17,26 @@
 	
 				dataService.getFeed().then( function(data){
 
-					vm.photo = data.data.data[$stateParams.id];
-					//cache values for better readability
-					mapService.setMap(vm.photo.location.latitude,vm.photo.location.longitude, vm.photo.images.thumbnail.url, vm.photo.location.name);
 
-					//gets map and initializes it to be viewed 
-		
-						//delay to fully load map
-		
-
+					//** Abstract away for less clutter in controller
 				
+					//iterates through data object and finds if the current 
+					//id matches the specific data being clicked from the 
+					//photofeed
+					for(var i = 0; i < data.data.data.length; i++){
+						
+						//if photo with id matches photo id passed from
+						//photofeed, vm.photo will be assigned the 
+						//current photo and set the map location of the photo
+						if(data.data.data[i].id == $stateParams.id){
+							vm.photo = data.data.data[i];
+
+							mapService.setMap(vm.photo.location.latitude,vm.photo.location.longitude, vm.photo.images.thumbnail.url, vm.photo.location.name);
+
+						}
+
+			
+					}
 
 				}, function(error){
 
