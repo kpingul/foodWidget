@@ -78,6 +78,7 @@ h3{
 /*Single Feed */
 .user-container img{
   border-radius: 50%;
+  width: 80%;
 }
 .user-photo
 {
@@ -225,6 +226,7 @@ h3{
 @media(max-width: 560px){
     .breadcrumb li{
       font-size: 0.8em;
+      
     }
   .breadcrumb li a{
 

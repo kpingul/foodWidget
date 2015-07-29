@@ -22,7 +22,8 @@
 					var url = "https://api.instagram.com/v1/users/" + userId + "/?access_token=2078950030.1f5c74e.fa614065af4e484d92b96e91332850b0&callback=JSON_CALLBACK"
 
 
-					return $http.jsonp(url);
+
+					return $http.jsonp(url); //returns promise
 				}
 
 				

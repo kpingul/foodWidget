@@ -1,23 +1,25 @@
 
 
 <!-- Filter Section -->
+<ol class="breadcrumb" >
 
-		<ol class="breadcrumb" >
+  <li>Filter By</li>
 
-		  <li>Filter By</li>
-		    <li><a href="#" ng-click="sortType = 'caption.text'">Name</a></li>
-		  <li><a href="#" ng-click="sortType = '-likes.count'" >Most Likes</a></li>
-		  <li><a href="#" ng-click="sortType = 'likes.count'">Least Likes</a></li>
-		 
-		</ol>
+   <li><a href="#" ng-click="sortType = 'caption.text'">Name</a></li>
+
+  <li><a href="#" ng-click="sortType = '-likes.count'" >Most Likes</a></li>
+
+  <li><a href="#" ng-click="sortType = 'likes.count'">Least Likes</a></li>
+ 
+</ol>
 	
-
 
 <center>
 
 	<ul id="da-thumbs" class="da-thumbs photofeed-list">
 
 		<li   class="effectHover" effect-hover ng-repeat="photo in vm.images | orderBy:sortType track by $index">
+			
 
 			<a  ui-sref="photos({id: photo.id})">
 
