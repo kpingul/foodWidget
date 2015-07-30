@@ -14,12 +14,7 @@
 					
 					var vm = this;
 
-					dataService.getUserFeed(1015738).then( function(data){
-			
-					}, function(error){
-						console.log(error);
-					});
-
+	
 					dataService.getFeed().then(function(data){
 
 
