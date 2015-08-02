@@ -5,6 +5,18 @@
 #Build
 
 -Angular
-
+	
 -Bootstrap
+
+-Instagram API
+
+-Google Map API
+
+#Testing
+
+-Jasmine
+
+-Karma
+
+
 
