@@ -24,13 +24,8 @@
 							},1000)
 						})
 
-						//activate bootstrap tab bar
-						$('#maptab').click(function (e) {
-		
-						  e.preventDefault()
-						  $(this).tab('show');
-
-						});
+				
+						
 					}
 
 

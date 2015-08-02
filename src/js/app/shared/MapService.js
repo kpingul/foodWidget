@@ -9,6 +9,13 @@
 
 			.factory('mapService', function(){
 
+				var service = {
+
+  					setMap: setMap,
+			  		getMap: initialize
+
+				}
+
 				var lat 	= 0,
 					lng 	= 0,
 					url 	= "",
@@ -21,8 +28,6 @@
 					this.url =  decodeURI(url);
 					this.location = location;
 			
-
-
 			 	}
 
 		
@@ -37,7 +42,7 @@
 			          zoom: 14
 			        };
 
-			        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+			        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
 
 			
@@ -84,14 +89,7 @@
 
 				}
 
-			  return {
-
-			  	setMap: setMap,
-
-			  	getMap: initialize
-
-					  
-			   };
+			  return service;
 
 		  });
 
