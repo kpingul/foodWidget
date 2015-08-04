@@ -6,7 +6,10 @@
 
 	angular.module('myApp')
 
-	.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
+	.config(['$urlRouterProvider', '$stateProvider','usSpinnerConfigProvider', function($urlRouterProvider, $stateProvider, usSpinnerConfigProvider) {
+ 			
+ 			//Settings for Spinner.js 
+ 		   usSpinnerConfigProvider.setDefaults({color: '#fff', position: 'relative', top: '130px', right: '90px'});
 
 			$urlRouterProvider.when('', '/');
 
@@ -66,8 +69,9 @@
 								//Mapping out the value passed in the state params 
 								//and used to check for correct item in array
 								data.data.data.map(function(item, index){
-									if(item.id === $stateParams.id){
-										console.log(item);
+
+									if(item.id === $stateParams.id) {
+
 										singleFeedItem =  item;
 									}
 								});
@@ -75,8 +79,9 @@
 								return singleFeedItem;
 							
 							}, function(error){
+
 								return error;
-							})						
+							});			
 						}]
 
 					}

@@ -36,6 +36,8 @@ gulp.task('depsJs', function(){
 			paths.bower + 'angular-ui-router/release/angular-ui-router.min.js',
 			paths.bower + 'jquery/dist/jquery.min.js',
 			paths.bower + 'bootstrap/dist/js/bootstrap.min.js',
+			paths.bower + 'spin.js/spin.js',
+			paths.bower + 'angular-spinner/angular-spinner.js',
 			paths.plugins + 'plugin.js'
 
 		])

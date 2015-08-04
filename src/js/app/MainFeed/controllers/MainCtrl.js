@@ -16,10 +16,10 @@
 
 					vm.images = MainFeed.data.data;
 				
+
+			
+
 			}
-
-
-
 
 
 }());
