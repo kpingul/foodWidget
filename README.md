@@ -1,7 +1,7 @@
 
 # What is Food Widget?
 
-Food widget is a an experiement I created to allow users to view my instagram photos. 
+Food widget is a an experiement I created to allow users to view photos from my Instagram account.
 
 <a href="http://kirckpingul.com/foodWidget">Live Demo Here</a>
 
