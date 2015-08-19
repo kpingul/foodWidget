@@ -137,7 +137,7 @@ The tools I'm using for the unit tests are:
 
 * <a href="https://github.com/jasmine/jasmine">Jasmine</a>(A behavior-driven development framework for testing JavaScript)
 
-* <a href="http://karma-runner.github.io/0.13/index.html">Karma</a>(Test RUnning for JavaScript)
+* <a href="http://karma-runner.github.io/0.13/index.html">Karma</a>(Test runner for JavaScript)
 
 To run the test:
 
