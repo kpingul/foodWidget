@@ -16,13 +16,14 @@ describe('Routing Test', function() {
     });
 
     inject(function(_$rootScope_, _$state_, $templateCache, _$httpBackend_, _$injector_) {
-      $rootScope = _$rootScope_;
+       $scope = _$rootScope_;
       $state = _$state_;
       $injector = _$injector_;
-      $templateCache.put('src/js/app/MainFeed/templates/photofeed.tpl.html', 'Template for Main Feed');
-      $templateCache.put('src/js/app/SingleFeed/templates/singlefeedphoto.tpl.html', 'Template for Single Feed');
-    });
+      $httpBackend = _$httpBackend_;
+      $templateCache.put('src/js/app/MainFeed/templates/photofeed.tpl.html', '');
+      $templateCache.put('src/js/app/SingleFeed/templates/singlefeedphoto.tpl.html', '');
 
+    });
 
   });
 
@@ -40,6 +41,7 @@ describe('Routing Test', function() {
     var homeState = $state.get(home);
     expect(homeState.name).toEqual(home)
     expect(homeState.resolve.MainFeed).toBeDefined();
+
 
   });
 
