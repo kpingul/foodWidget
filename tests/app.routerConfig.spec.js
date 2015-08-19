@@ -23,7 +23,6 @@ describe('Routing Test', function() {
       $templateCache.put('src/js/app/SingleFeed/templates/singlefeedphoto.tpl.html', 'Template for Single Feed');
     });
 
-    // $httpBackend.whenJSONP('https://api.instagram.com/v1/users/self/feed?access_token=2078950030.1f5c74e.fa614065af4e484d92b96e91332850b0&callback=JSON_CALLBACK&count=30').respond(200)
 
   });
 
