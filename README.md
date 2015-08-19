@@ -1,7 +1,7 @@
 
 # What is Food Widget?
 
-Food widget is a widget I created to allow users to view my instagram photos.
+Food widget is a an experiement I created to allow users to view my instagram photos and get familar with the <a href="https://instagram.com/developer/?hl=en">Instagram API's</a>.
 
 <a href="http://kirckpingul.com/foodWidget">Live Demo Here</a>
 
@@ -23,7 +23,7 @@ The folder structure for this application is sorted by features rather by type. 
 <b>Package.json</b>
 
 <pre>
- "express": "^4.13.1",
+"express": "^4.13.1",
 "gulp": "^3.9.0",
 "gulp-concat": "^2.6.0",
 "gulp-minify-css": "^1.2.0",
@@ -59,7 +59,7 @@ Food Widget can be installed simply by:
 
 #Features
 
-<b>The application and UI is built entirely with the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!), <a href="http://getbootstrap.com/">Bootstrap</a> CSS Framework(the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web)</b>
+<b>The application and UI is built entirely with the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!) and the <a href="http://getbootstrap.com/">Bootstrap</a> CSS Framework(the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web)</b>
 
 
 
@@ -105,8 +105,8 @@ The tools I'm using to test the widget are :
 
 -<a href="http://karma-runner.github.io/0.13/index.html">Karma</a>(Test RUnning for JavaScript)
 
-To run the test type:
+To run the test:
 
-<pre> karma start</pre>
+<pre>karma start</pre> 
  
 
