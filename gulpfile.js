@@ -100,7 +100,7 @@ gulp.task('styles', function(){
 //Javascript files
 gulp.task('watchScripts', function(){
 
-	return gulp.watch('src/js/*.js', ['scripts']);
+	return gulp.watch('src/js/app/**/*.js', ['scripts']);
 
 })
 
@@ -133,6 +133,6 @@ gulp.task('express', function(){
 
 
 //RUN IN SEQUENCE
-gulp.task('default', ['express']);
+gulp.task('default', ['express', 'watchScripts', 'watchStyles']);
 
 

@@ -2,7 +2,7 @@
 
 describe('Main Controller Test', function() {
 		
-		var DataService,
+		var $provide,
 			MainCtrl,
 			$scope,
 			$rootScope,
@@ -11,31 +11,35 @@ describe('Main Controller Test', function() {
 			beforeEach(function() {
 				
 				module('myApp')
-
-				inject(function(_$rootScope_, _$controller_, _dataService_){
+				var mockData = [];
+				
+				inject(function(_$rootScope_, _$controller_){
 
 					$scope = _$rootScope_.$new();
 					$controller = _$controller_;
-					DataService = _dataService_;
+
 					
 				});
 
-				MainCtrl = $controller('MainCtrl as vm', {$scope: $scope});
+				MainCtrl = $controller('MainCtrl as vm', {
+
+					$scope: $scope, 
+					MainFeed: mockData
+			
+				});
 
 
 
 			});
 
-			it('should  start with empty data', function() {
+			it('should contain a controller', function() {
+				expect(MainCtrl).toBeDefined();
+			});
+
+			it('should contain a list of images', function() {
 				expect($scope.vm.images).toEqual([]);
-				expect($scope.vm.photo).toEqual({});
-				expect($scope.vm.userId).toEqual({});
 			});
 
-			it('receive images from Service', function() {
-				DataService.getFeed();
-				expect($scope.vm.images).toBeDefined();
-			});
 
 
 });

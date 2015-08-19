@@ -14,7 +14,7 @@
 
 						var arr = value.split(" ").filter( function(item, index){
 
-						         return item[0] !== '#';
+						    return item[0] !== '#';
 						});
 			
 		

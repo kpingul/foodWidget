@@ -19,7 +19,7 @@
 
 					url: '/',
 
-					templateUrl: 'src/js/app/MainFeed/templates/photofeed.tpl.html',
+					templateUrl: 'src/js/app/MainFeed/photofeed.tpl.html',
 
 					controller: 'MainCtrl',
 
@@ -33,7 +33,7 @@
 							
 							return dataService.getFeed().then(function(data){
 
-								return data;
+								return data.data.data;
 
 							},function(error){
 
@@ -50,7 +50,7 @@
 
 					url: '/photos/:id',
 
-					templateUrl: 'src/js/app/SingleFeed/templates/singlefeedphoto.tpl.html',
+					templateUrl: 'src/js/app/SingleFeed/singlefeedphoto.tpl.html',
 
 					controller: 'PhotoCtrl',
 

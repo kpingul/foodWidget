@@ -1,46 +1,54 @@
 /* Router Test */
 
+
 describe('Routing Test', function() {
 
-  var $rootScope, $state;
+  var $rootScope,
+    $state,
+    myServiceMock,
+    $httpBackend, home = 'home',
+    photos = 'photos';
 
   beforeEach(function() {
 
-    module('myApp');
+    module('myApp', function($provide) {
+      $provide.value('dataService', myServiceMock = {});
+    });
 
-    inject(function(_$rootScope_, _$state_, $templateCache) {
+    inject(function(_$rootScope_, _$state_, $templateCache, _$httpBackend_, _$injector_) {
       $rootScope = _$rootScope_;
       $state = _$state_;
-
-
-      // We need add the template entry into the templateCache if we ever
-      // specify a templateUrl
+      $injector = _$injector_;
       $templateCache.put('src/js/app/MainFeed/templates/photofeed.tpl.html', 'Template for Main Feed');
       $templateCache.put('src/js/app/SingleFeed/templates/singlefeedphoto.tpl.html', 'Template for Single Feed');
     });
+
+    // $httpBackend.whenJSONP('https://api.instagram.com/v1/users/self/feed?access_token=2078950030.1f5c74e.fa614065af4e484d92b96e91332850b0&callback=JSON_CALLBACK&count=30').respond(200)
+
   });
 
   it('should respond to home url', function() {
-  	$rootScope.$apply( function(){
-  		$state.transitionTo('home');
-
-  	});
-    expect($state.current.url).toEqual('/');
-    expect($state.current.templateUrl).toEqual('src/js/app/MainFeed/templates/photofeed.tpl.html');
+    expect($state.href(home)).toEqual('#/');
   });
 
-  it('should respond to home url', function() {
-  	$rootScope.$apply( function(){
-  		$state.transitionTo('photos');
 
-  	});
-    expect($state.current.url).toEqual('/photos/:id');
-    expect($state.current.templateUrl).toEqual('src/js/app/SingleFeed/templates/singlefeedphoto.tpl.html');
+  it('should respond to photos url', function() {
+    expect($state.href(photos, {id: 1})).toEqual('#/photos/1');
   });
 
-  
 
+  it('should contain main feed data', function() {
+    var homeState = $state.get(home);
+    expect(homeState.name).toEqual(home)
+    expect(homeState.resolve.MainFeed).toBeDefined();
 
+  });
 
+  it('should contain resolve data', function() {
+    var photoState = $state.get(photos);
+
+    expect(photoState.name).toEqual(photos)
+    expect(photoState.resolve.SingleFeed).toBeDefined();
+  });
 
 });
