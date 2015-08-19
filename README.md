@@ -67,7 +67,7 @@ Food Widget can be installed simply by:
 Features include:
  
 <ul> 
-<li><a href="https://instagram.com/developer/?hl=en">Instagram API</a> for developers that allows to view pictures from my account</li>
+<li><a href="https://instagram.com/developer/?hl=en">Instagram API</a> that allows users to view photos from my <a href="https://Instagram.com/">Instagram</a> account</li>
 <li><a href="https://developers.google.com/maps/documentation/javascript/">Google Maps API</a> to display the specific locations of each photo.</li>
 </ul>
 
