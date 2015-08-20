@@ -142,8 +142,8 @@ The tools I'm using for the unit tests are:
 To run the test:
 
 <pre>karma start</pre> 
- 
- ##License 
+
+##License
  
  MIT
  
