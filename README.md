@@ -143,7 +143,9 @@ To run the test:
 
 <pre>karma start</pre> 
  
+ ##Testing 
  
+ MIT
  
  
  
