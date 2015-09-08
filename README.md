@@ -2,10 +2,11 @@
 
 ***
 
+####The sample demo can be found <a href="http://kirckpingul.com/foodWidget"><b>here</b></a>
+
 ##Purpose
 The idea is to create a small application to allow users to view photos from my Instagram account using AngularJS. It is designed to allow users view the photos descriptions, likes, and location it was taken at. More specifically, the application tries to show best practices when it comes to: <b>folders structure</b>, <b>using modules</b>, <b>organizing navigation</b>, building <b>a simple interface</b> as well as <b>unit testing</b>
 
-The sample demo can be found <a href="http://kirckpingul.com/foodWidget"><b>here</b></a>
 
 ##Stack
 
