@@ -30,11 +30,15 @@
 						MainFeed: ['dataService', function(dataService){
 
 							//$HTTP returns promise
-							
+							var images = [];
 							return dataService.getFeed().then(function(data){
-
-								return data.data.data;
-
+								
+								data.data.data.map(function(val, index) {
+									if(val.user.username.toLowerCase() === "kirckdude") {
+										images.push(val);
+									}
+								});
+								return images;
 							},function(error){
 
 								return error;
