@@ -32,11 +32,9 @@
 							//$HTTP returns promise
 							var images = [];
 							return dataService.getFeed().then(function(data){
-								
+						
 								data.data.data.map(function(val, index) {
-									if(val.user.username.toLowerCase() === "kirckdude") {
-										images.push(val);
-									}
+									images.push(val);
 								});
 								return images;
 							},function(error){
