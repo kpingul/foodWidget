@@ -5,7 +5,6 @@ var gulp 		= require('gulp'),
 	rename 		= require('gulp-rename'),
 	uglify 		= require('gulp-uglify'),
 	minifyCss   = require('gulp-minify-css'),
-	app 		= express(),
 	port 		= 3000;
 
 
