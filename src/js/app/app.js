@@ -4,10 +4,10 @@
 
 	'use strict';
 
-
-	var app = angular.module('myApp', ['ui.router', 'angularSpinner']);
-
-
+	angular.module('myApp', [
+		'ui.router', 
+		'angularSpinner'
+		]);
 
 }());
 

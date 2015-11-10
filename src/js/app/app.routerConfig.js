@@ -1,97 +1,124 @@
 /* Routing Configurations */
 
-(function(){
+(function() {
 
 	'use strict';
 
 	angular.module('myApp')
 
-	.config(['$urlRouterProvider', '$stateProvider','usSpinnerConfigProvider', function($urlRouterProvider, $stateProvider, usSpinnerConfigProvider) {
- 			
- 			//Settings for Spinner.js 
- 		   usSpinnerConfigProvider.setDefaults({color: '#fff', position: 'relative', top: '130px', right: '90px'});
+	.config(['$urlRouterProvider', '$stateProvider', 'usSpinnerConfigProvider',
+		function($urlRouterProvider, $stateProvider, usSpinnerConfigProvider) {
+
+			//Settings for Spinner.js 
+			usSpinnerConfigProvider.setDefaults({
+				color: '#fff',
+				position: 'relative',
+				top: '130px',
+				right: '90px'
+			});
 
 			$urlRouterProvider.when('', '/');
 
 			$stateProvider
 
-				.state('home', {
+			.state('home', {
 
-					url: '/',
+				url: '/',
 
-					templateUrl: 'src/js/app/MainFeed/photofeed.tpl.html',
+				templateUrl: 'src/js/app/MainFeed/photofeed.tpl.html',
 
-					controller: 'MainCtrl',
+				controller: 'MainCtrl',
 
-					controllerAs: 'vm',
+				controllerAs: 'vm',
 
-					resolve : {
+				resolve: {
 
-						MainFeed: ['dataService', function(dataService){
+					MainFeed: ['dataService',
+						function(dataService) {
 
-							//$HTTP returns promise
-							var images = [];
-							return dataService.getFeed().then(function(data){
-						
-								data.data.data.map(function(val, index) {
-									images.push(val);
-								});
-								return images;
-							},function(error){
+							return dataService
+								.getFeed()
+								.then(handleData)
+								.catch(handleError);
 
+							function handleData(data) {
+								return data;
+							}
+
+							function handleError(error) {
 								return error;
+							}
 
-							});
+						}
+					],
+
+					RecentFeed: ['dataService',
+						function(dataService) {
+
+							return dataService
+								.getRecentFeed()
+								.then(handleData)
+								.catch(handleError);
+
+							function handleData(data) {
+								return data;
+							}
+
+							function handleError(error) {
+								return error;
+							}
 
 
-						}]
-					}
-				})
+						}
+					]
+				}
+			})
 
-				.state('photos', {
+			.state('photos', {
 
-					url: '/photos/:id',
+				url: '/photos/:id',
 
-					templateUrl: 'src/js/app/SingleFeed/singlefeedphoto.tpl.html',
+				templateUrl: 'src/js/app/SingleFeed/singlefeedphoto.tpl.html',
 
-					controller: 'PhotoCtrl',
+				controller: 'PhotoCtrl',
 
-					controllerAs: 'vm',
+				controllerAs: 'vm',
 
-					resolve : {
+				resolve: {
 
-						SingleFeed: ['dataService', '$stateParams', '$state', function(dataService, $stateParams, $state) {
-								
+					SingleFeed: ['dataService', '$stateParams', '$state',
+						function(dataService, $stateParams, $state) {
+
 							var singleFeedItem;
 
 							//$HTTP returns promise
 
-							return dataService.getFeed().then(function(data){
-								
+							return dataService.getFeed().then(function(data) {
+
 								//Mapping out the value passed in the state params 
 								//and used to check for correct item in array
-								data.data.data.map(function(item, index){
+								data.data.data.map(function(item, index) {
 
-									if(item.id === $stateParams.id) {
+									if (item.id === $stateParams.id) {
 
-										singleFeedItem =  item;
+										singleFeedItem = item;
 									}
 								});
 
 								return singleFeedItem;
-							
-							}, function(error){
+
+							}, function(error) {
 
 								return error;
-							});			
-						}]
+							});
+						}
+					]
 
-					}
+				}
 
-				})
+			})
 
-		}])
+		}
+	])
 
 }());
-
-

@@ -120,9 +120,6 @@ gulp.task('express', function(){
 
 	app.use(express.static(__dirname + '/'));
 
-
-
-
 	app.listen(port, function(){
 
 	console.log('Server running on port ' + port);

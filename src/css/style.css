@@ -1,254 +1,293 @@
-body{
-  background: #131313;
-  font-family: 'Raleway', sans-serif;
+/*   
+
+Author: Kirck Pingul
+
+::  1.0 Global
+-------------------------------------------
+    1.1 Overlay state loading spinner
+    1.1 Filter loading spinner
+
+::  2.0 Navigaition Section 
+-------------------------------------------
+
+*/
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic);
+/* ************************************************* */
+/*                    1.0 Global                     */
+/* ************************************************* */
+body {
+  color: #FFA42D;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  background-color: #fff;
 }
 
-.breadcrumb{
-  background: none;
-    color: #fff;
+.col-xs-4{
+  text-align: center;
 }
-.breadcrumb li a{
-  color: #fff;
-  font-weight: 900;
-  font-size: 1.2em;
-}
-
-h3{
-  color: #fff;
-}
-/* Main PhotoFeed */
-
-.photofeed-list 
-{
-  list-style-type: none;
-}
-.photofeed-list li
-{
-  display: inline-block;
-  padding: 0;
-}
-
-/*Map Container */
-
-
-#map-canvas 
-{
-  height: 300px;
-  width: 100%;
+.img-circle{
   margin: 0 auto;
-  padding: 0;
-
 
 }
-.nav-tabs li a{
-  color: #fff;
-  font-weight: bold;
-}
 
-
-.tab-photo{
-  width: 50%;
-
-  float: left;
+.fa-heart{
+  color: #FFA42D;
 }
-.tab-photo img{
-  width:100%;
+/* ************************************************* */
+/*                 2.0 BootStrap                     */
+/* ************************************************* */
+.navbar {
+  background: transparent;
+  border-bottom: none;
+  padding: 30px 0 10px;
+  transition-duration: 0.6s;
 }
-
-.tab-photo-details{
-  width: 30%;
-  float: right;
-  color: #fff;
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav>li>a {
+  color: #FFA42D;
 }
-
-.tab-photo-details-list{
-  list-style-type: none;
-  padding: 0;
-}
-.tab-photo-details-list li{
-  font-size: 1.2em;
-  padding: 20px 0px;
-}
-
-.tab-photo-details-title{
-  color: #fff;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-/*Single Feed */
-.user-container img{
-  border-radius: 50%;
-  width: 80%;
-}
-.user-photo
-{
-  border-radius: 50%;
-  height: 100px;
-}
-
-.fa-heart 
-{
-  color: #FF0000;
-}
-.photo-count
-{
-  font-size: 1.3em;
-  display: 
-}
-h6{
-  color: #fff;
-  font-size: 0.7em;
+#brand{
+  font-size: 2em;
   font-style: italic;
 }
-  
-
-.user-likes-list{
-  list-style-type: none;
-  display: block;
-  padding: 0;
+#brand-1{
+  font-size: 1.2em;
 }
-.user-likes-list li{
+#brand:hover,
+#brand:active,
+#brand:focus{
+  color: #FFB85A;
+
+}
+#brand-1:hover,
+#brand-1:active,
+#brand-1:focus{
+  color: #FFB85A;
+
+}
+.navbar-default .navbar-nav>li {
+  margin-right: 8px;
+}
+.navbar-default .navbar-nav>li:last-of-type {
+  margin-right: 0;
+}
+.dropdown-menu,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+  color: #FFB85A;
+  font-weight: bold;
+}
+.dropdown-menu {
+  padding: 8px;
+  box-shadow: none;
+  border: none;
+}
+.dropdown-menu li a {
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.nav-dropdown-scroll {
+  background: #e7eaea;
+  box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.4);
+}
+.navbar-toggle,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background: #fff;
+}
+
+/* ************************************************* */
+/*                 2.0 Main Header Section           */
+/* ************************************************* */
+section.cover {
+
+  background: url('../img/alps.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 85vh;
+  display: flex;
+}
+
+.meal-title{
+  font-weight: 100;
+  font-size: 3em;
   color: #fff;
-  display: inline-block;
-  margin-right: 1%;
-}
-h3{
-  display: block;
-}
-.total-likes{
-  font-size: 1.6em;
-  color: #fff;
-}
-/* 1st Breakpoint */
-.user-like-container{
-
-  width: 40%;
-  float: left;
-}
-.map-container{
-
-  width: 50%;
-  float: right;
-}
-
-
-
-/*  CSS for Direct Aware Effect */
-
-.instaPhotos
-{
-  width: 100%;
-}
-
-.da-thumbs 
-{
-  list-style: none;
-  width: 100%;
-  height: 600px;
-  
-  padding: 0;
-}
-.da-thumbs li 
-{
-
-  background: #131313;
-  position: relative;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.da-thumbs li a,
-.da-thumbs li a img 
-{
-  display: block;
-  position: relative;
-}
-.da-thumbs li a 
-{
-  overflow: hidden;
-}
-.da-thumbs li a div 
-{
-  position: absolute;
-  background: #333;
-  background: rgba(75,75,75,0.5);
-  width: 100%;
-  height: 100%;
-}
-.da-thumbs li a div.custom-hover-object
- {
-  position: absolute;
-  background: #333;
-  background: rgba(255,255,255,0.5);
-  width: 100%;
-  height: 100%;
-}
-.da-thumbs li a div span
- {
-  display: block;
-  padding: 10px 0;
-  margin: 100px 20px 20px 20px;
-  text-transform: uppercase;
-  font-weight: normal;
-  color: rgba(255,255,255,0.9);
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-  border-bottom: 1px solid rgba(255,255,255,0.5);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
   text-align: center;
-
+  padding-top: 10%;
 }
-.da-thumbs li a div.custom-hover-object span 
-{
-  color: rgba(75,75,75,0.9);
-  text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
-  border-bottom: 1px solid rgba(0,0,0,0.2);
-
+.meal-count {
+  font-weight: bold;
+  font-size: 1.2em;
 }
-
-
-@media(max-width: 725px){
-  .user-like-container{
-    width:100%;
-    float: none;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .map-container{
-
-    width: 100%;
-    float: none;
-  }
-
-
-  
-
+#meal-scroll{
+  padding: 23%;
+  text-align: center;
 }
 
-@media(max-width: 560px){
-    .breadcrumb li{
-      font-size: 0.8em;
-      
-    }
-  .breadcrumb li a{
-
-     font-size: 1.2em;
-  }
-
+.about-title{
+  text-align: center;
+  display: block;
+  color: #555;
+  font-size: 2.4em;
+  margin-top: 60px;
+  font-weight: 900;
 }
 
-@media(max-width: 450px){
-    .tab-photo-details{
-      margin-right: 2%;
-    }
-    .tab-photo-details-title{
-      font-size: 1em;
-    }
-  .tab-photo-details-list li{
-    font-size: 0.9em;
-   
-  }
 
-  #map-canvas{
-    height: 200px;
-  }
+.meal-custom-button {
 
+  height:50px;
+  line-height:45px;
+  background: transparent;
+  border:solid 2px #FFA42D;
+  color:#FFA42D;
+  font-weight:400;
+
+  cursor:pointer;
+  border-radius:2px;
+  transition:all ease-in-out 200ms;
+}
+
+.meal-custom-button:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.lead:after {
+    position:absolute;
+    content:' ';
+    background:#FFA42D;
+    width:80px;
+    height:4px;
+    bottom:-30px;
+    left:50%;
+    margin-left:-40px;
+}
+/*______________________________*/
+/* 3.1 Recent Feed Hover Effect */
+/*______________________________*/
+
+.img-view {
+  width: 320px;
+  height: 228px;
+  margin: 20px auto;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+.img-view img, .img-view .caption {
+  position: absolute;
+  transition: all 0.2s linear;
+}
+.img-view img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s linear;
+}
+.img-view .caption {
+  z-index: 111;
+  color: #fff;
+  text-align: center;
+  width: 320px;
+  height: 238px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.img-view .caption:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+.img-view .caption .content {
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.4s linear;
+}
+.img-view:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  box-shadow: #000 0 0 50px inset;
+  display: block;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.img-view h2 {
+  margin: 0 0;
+  font-weight: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  opacity: 0;
+  transform: perspective(120px) rotateX(52deg);
+  transition: all 0.4s linear;
+}
+.img-view p {
+  font-weight: 100;
+  opacity: 0;
+  transform: translate(0, 10px);
+  -webkit-filter: blur(5px);
+  transition: all 0.4s ease;
+}
+.img-view:hover .caption, .img-view:hover:after {
+  opacity: 1;
+}
+.img-view:hover h2 {
+  transform: translate(0, 0) rotate(0);
+  opacity: 1;
+}
+.img-view:hover p {
+  opacity: 1;
+  transform: translate(0, 0);
+  -webkit-filter: blur(0);
+}
+.img-view:hover img {
+  transform: scale(1.1);
+}
+
+
+/* Helpers for top position on internal page links
+====================================================*/
+#spytop:before,
+section:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -100px; 
+  height: 100px; 
+  visibility: hidden; 
+}
+
+
+
+
+/* jQuery Styles
+===================================*/
+.navbar-scroll {
+  background: rgba(100, 109, 155, 0.9);
+  padding: 0;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.6s;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .meal-title{
+
+    padding-top: 20%;
+  }
 }

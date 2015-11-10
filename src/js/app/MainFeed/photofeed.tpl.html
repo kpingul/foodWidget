@@ -1,40 +1,40 @@
 
+  <section class="cover" id="spytop"> 
+      
+      <div class="container">
+          <p class="meal-title">
+            <span class="meal-count">{{vm.feed.length}}</span> Meals, <span class="meal-count">1</span> Man
+          </p>
+      <!--       <p id="meal-scroll">
+              <button class="meal-custom-button">Let's take a look</button>
+            </p> -->
+      </div><!-- end of container -->
 
-<!-- Filter Section -->
-<ol class="breadcrumb" >
+  </section><!-- end of cover -->
 
-  <li>Filter By</li>
+  <div class="row">
+     <span class="about-title">Most Recent Meals</span>
+        <p class="lead"></p>
+  </div><!-- end of row -->
 
-   <li><a href="#" ng-click="sortType = 'caption.text'">Name</a></li>
+  <div class="row" style="padding: 45px 0px">
+        <div class="col-xs-12 col-sm-12 col-md-4" ng-repeat="photo in ::vm.images track by $index">   
+          <div class="img-view">
+            <img ng-src="{{photo.images.low_resolution.url}}" class=" img-responsive"/>
+            <div class="caption">
+                <div class="content">
+                  <p>
+                    <span class="fa-stack fa-2x">
+                      <i class="fa fa-heart fa-stack-2x"></i>
+                      <strong class="fa-stack-1x">{{photo.likes.count}}</strong>
+                    </span>
+                  </p>
+                  <h2>{{photo.created_time | timefilter}}</h2>
+                  <p>{{photo.caption.text | captionfilter}}</p>
+                </div>
+              </div>
+          </div><!-- end of img view -->
+        </div><!-- end of col -->
+  </div><!-- end of row -->
+    
 
-  <li><a href="#" ng-click="sortType = '-likes.count'" >Most Likes</a></li>
-
-  <li><a href="#" ng-click="sortType = 'likes.count'">Least Likes</a></li>
- 
-</ol>
-	
-
-<center>
-
-	<ul id="da-thumbs" class="da-thumbs photofeed-list">
-
-		<li   class="effectHover" effect-hover ng-repeat="photo in vm.images | orderBy:sortType track by $index">
-			
-
-			<a  ui-sref="photos({id: photo.id})">
-
-				<img src="{{photo.images.low_resolution.url}}" class="instaPhotos" />
-
-				<div>
-
-					<span><i class="fa fa-heart fa-2x"></i> <b>{{photo.likes.count}}</b> </span>
-					<h6>Click for more details..</h6>
-				</div>
-
-			</a>
-
-		</li>
-
-	</ul>
-
-</center>
