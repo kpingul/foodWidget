@@ -5,7 +5,6 @@ var gulp 		= require('gulp'),
 	rename 		= require('gulp-rename'),
 	uglify 		= require('gulp-uglify'),
 	minifyCss   = require('gulp-minify-css'),
-	express 	= require('express'),
 	app 		= express(),
 	port 		= 3000;
 
@@ -114,22 +113,9 @@ gulp.task('watchStyles', function(){
 
 
 
-//Server
-
-gulp.task('express', function(){
-
-	app.use(express.static(__dirname + '/'));
-
-	app.listen(port, function(){
-
-	console.log('Server running on port ' + port);
-})
-
-
-});
 
 
 //RUN IN SEQUENCE
-gulp.task('default', ['express', 'watchScripts', 'watchStyles']);
+gulp.task('default', ['watchScripts', 'watchStyles']);
 
 

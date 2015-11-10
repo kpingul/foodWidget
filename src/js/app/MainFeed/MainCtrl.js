@@ -21,14 +21,12 @@
 					var navDropdown = $('.dropdown-menu');
 					
 					$(window).scroll(function(){
-						if($(window).scrollTop() <= 250){
-							navbar.removeClass('navbar-scroll');
-							navDropdown.removeClass('nav-dropdown-scroll');
-							$('.top').hide();
+						if($(window).scrollTop() <= 50){
+							navbar.removeClass('navbar-scroll')
+					
 						} else {
 							navbar.addClass('navbar-scroll');
-							navDropdown.addClass('nav-dropdown-scroll');
-							$('.top').show();
+					
 						}
 					});
 				
