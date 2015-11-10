@@ -5,8 +5,7 @@
 	'use strict';
 
 	angular.module('myApp', [
-		'ui.router', 
-		'angularSpinner'
+		'ui.router'
 		]);
 
 }());

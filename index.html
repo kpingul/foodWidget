@@ -3,76 +3,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="build/css/style.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Maven+Pro:500' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<title>Kirck's Food Journey</title>
 </head>
 
 <body ng-app="myApp">
 
-  <!-- Fixed Nav -->
-  <nav class="navbar navbar-default navbar-fixed-top" id="myScrollspy">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" id="brand" href="">Kirck's Food Journey</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="" id="brand-1">About Me</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>  
-  <!-- //Close Fixed Nav -->  
 
-	<ui-view>
+	<div ui-view>
+		<!-- templates inserted here -->
+	</div>
 
-	</ui-view>
+	<!-- Libs -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARJhGB267_hmjTvtYPewhGV63UPd7od1Q"></script>
+	<script src="build/deps.min.js"></script>
 
-		
-
- 
-
-
-<!-- ******* -->
-<!-- Scripts -->
-<!-- ******* -->
-
-
-<!-- Library Dependencies -->
-
-<script src="build/deps.min.js"></script>
-
-
-<!-- Google API -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARJhGB267_hmjTvtYPewhGV63UPd7od1Q"></script>
-
-<!-- Javascript -->
-<script src="build/js/app.min.js"></script>
-
-<!-- <script src="src/js/app/app.js"></script>	
-<script src="src/js/app/app.routerConfig.js"></script>
-<script src="src/js/app/shared/DataService.js"></script>
-<script src="src/js/app/shared/MapService.js"></script>
-<script src="src/js/app/shared/DateFilter.js"></script>
-<script src="src/js/app/shared/CaptionFilter.js"></script>
-<script src="src/js/app/MainFeed/MainCtrl.js"></script>
-<script src="src/js/app/SingleFeed/PhotoCtrl.js"></script>
-<script src="src/js/app/MainFeed/effectHover.directive.js"></script>
-<script src="src/js/app/SingleFeed/activateMap.directive.js"></script> -->
-
-
+	<!-- Scripts -->
+	<script src="build/js/app.min.js"></script>
 </body>
 </html>

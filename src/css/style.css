@@ -157,17 +157,26 @@ section.cover {
 .meal-custom-button:hover {
   background: rgba(255,255,255,0.3);
 }
-
+.lead {
+    font-size:17px;
+    line-height:24px;
+    font-weight:normal;
+    text-transform:uppercase;
+    margin-bottom:15px;
+    color:#2e2e2e;
+    position:relative;
+}
 .lead:after {
     position:absolute;
     content:' ';
     background:#FFA42D;
     width:80px;
     height:4px;
-    bottom:-30px;
+    bottom:-16px;
     left:50%;
     margin-left:-40px;
 }
+
 /*______________________________*/
 /* 3.1 Recent Feed Hover Effect */
 /*______________________________*/

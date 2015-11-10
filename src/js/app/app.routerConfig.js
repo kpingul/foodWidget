@@ -6,16 +6,8 @@
 
 	angular.module('myApp')
 
-	.config(['$urlRouterProvider', '$stateProvider', 'usSpinnerConfigProvider',
-		function($urlRouterProvider, $stateProvider, usSpinnerConfigProvider) {
-
-			//Settings for Spinner.js 
-			usSpinnerConfigProvider.setDefaults({
-				color: '#fff',
-				position: 'relative',
-				top: '130px',
-				right: '90px'
-			});
+	.config(['$urlRouterProvider', '$stateProvider',
+		function($urlRouterProvider, $stateProvider) {
 
 			$urlRouterProvider.when('', '/');
 
@@ -32,6 +24,22 @@
 				controllerAs: 'vm',
 
 				resolve: {
+
+					HighestRated: ['dataService', 
+						function(dataService) {
+							return dataService
+								.getHighestRated()
+								.then(function(response) {
+									return response;
+								})
+								.catch(handleError);
+
+							function handleError(error) {
+								return error;
+							}
+
+						}
+					],
 
 					MainFeed: ['dataService',
 						function(dataService) {
