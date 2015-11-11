@@ -64,14 +64,9 @@
 				/* Utility Functions */	
 
 				function handleHighestRatedData(data) {
-					var highestRated = [];
-					data.data.data.map(function(val, index) {
+					
 
-						if( val.likes.count > 7 ) {
-							highestRated.push(val)
-						}
-					});
-					return highestRated;
+					return sortHighest(data);
 				}
 
 
@@ -102,6 +97,24 @@
 					return error;
 				}
 
+				/* Utility Methods */
+
+				function sortHighest(data) {
+					var highest = data.data.data;
+				
+					for( var i = 0; i < highest.length; i++ ) {
+						for( var j = i + 1; j < highest.length; j++ ) {
+							if( highest[j].likes.count > highest[i].likes.count ) {
+								var temp = highest[j];
+								highest[j] = highest[i];
+								highest[i] =temp;
+
+							}
+						}
+					}
+					return highest[0];
+
+				}
 
 				return service;
 

@@ -41,11 +41,12 @@
 							});
 						}
 					});
-
+					console.log(cityName);
 					return cityName;
 				}
 
 				function handleYelpBusiness(data) {
+				
 					return $http
 						.get('api/yelp/business/' + service.name.split(" ").join("-") + '-' + data.split(" ").join("-"))
 						.then(handleYelpBusinessData)	

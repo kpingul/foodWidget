@@ -15,7 +15,7 @@
 				var vm = this;
 				vm.images = RecentFeed;
 				vm.feed = MainFeed;
-				vm.highestRated = HighestRated[1];
+				vm.highestRated = HighestRated;
 				vm.highestRatedRestaurant = {};
 				
 				getYelp(vm.highestRated.location.latitude, vm.highestRated.location.longitude, vm.highestRated.location.name);
