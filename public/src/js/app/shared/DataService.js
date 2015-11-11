@@ -80,7 +80,6 @@
 					data.data.data.map(function(val, index) {
 						feed.push(val);
 					});
-					console.log(feed);
 					return feed;
 				}
 

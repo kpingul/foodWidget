@@ -31,8 +31,7 @@
 				function handleYelpData(data) {
 
 					vm.highestRatedRestaurant = data;
-					console.log(vm.highestRatedRestaurant);
-					console.log(vm.highestRated)
+	
 				}
 
 				function handleError(error) {
