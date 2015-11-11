@@ -1,23 +1,3 @@
-
-
-# What is Kirck's Food Journey?
-
-Food widget is a an experiement I created to allow users to view photos from my Instagram account.
-
-<a href='https://kircksfoodjourney.herokuapp.com'>Live Demo Here</a>
-
-#Requirements
-
--<a href="https://www.npmjs.com">npm</a>
-
--<a href="http://bower.io">bower</a>
-
--<a href="http://karma-runner.github.io/0.13/index.html">karma</a>
-
-#Dependencies
-
-<b>Package.json</b>
-
 =======
 #<a href="http://angularjs.org">AngularJS</a> Application
 
@@ -153,7 +133,7 @@ The folder structure for this application is sorted by features rather by type. 
 ###Features
 
 <b>The application and UI is built entirely with the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!) and the <a href="http://getbootstrap.com/">Bootstrap</a> CSS Framework(the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web)</b>
->>>>>>> 5b026e403288b7f12dd202fd5808a62a9b5beb48
+
 
 Features include:
  
@@ -194,7 +174,7 @@ The tools I'm using to test the widget are :
 
 -<a href="https://github.com/jasmine/jasmine">Jasmine</a>(A behavior-driven development framework for testing JavaScript)
 
--<a href="http://karma-runner.github.io/0.13/index.html">Karma</a>(Test RUnning for JavaScript)
+-<a href="http://karma-runner.github.io/0.13/index.html">Karma</a>(Test Running for JavaScript)
 =======
  
 ##Testing 
@@ -225,10 +205,6 @@ To run the test:
  
  
  
- 
- 
- 
- 
->>>>>>> 5b026e403288b7f12dd202fd5808a62a9b5beb48
+
  
 
