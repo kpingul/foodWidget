@@ -21,6 +21,7 @@
     "karma-jasmine": "^0.3.6"
   },
   "dependencies": {
+    "body-parser": "^1.14.1",
     "yelp": "^0.2.0"
   }
 }

@@ -8,17 +8,37 @@
 
 			.controller('MainCtrl', MainCtrl);
 
-			MainCtrl.$inject = ['$scope', 'RecentFeed', 'MainFeed', 'HighestRated'];
+			MainCtrl.$inject = ['$scope', 'RecentFeed', 'MainFeed', 'HighestRated', 'YelpService'];
 
-			function MainCtrl($scope, RecentFeed, MainFeed, HighestRated){
+			function MainCtrl($scope, RecentFeed, MainFeed, HighestRated, YelpService){
 			
-					var vm = this;
-					vm.images = RecentFeed;
-					vm.feed = MainFeed;
-					vm.highestRated = HighestRated[1];
+				var vm = this;
+				vm.images = RecentFeed;
+				vm.feed = MainFeed;
+				vm.highestRated = HighestRated[1];
+				vm.highestRatedRestaurant = {};
+				
+				getYelp(vm.highestRated.location.latitude, vm.highestRated.location.longitude, vm.highestRated.location.name);
+
+				function getYelp(lat, lng, name) {
+					YelpService
+						.getHighestRated(lat, lng, name)
+						.then(handleYelpData)
+						.catch(handleError);
+					
+				}
+
+				function handleYelpData(data) {
+
+					vm.highestRatedRestaurant = data;
+					console.log(vm.highestRatedRestaurant);
 					console.log(vm.highestRated)
-				
-				
+				}
+
+				function handleError(error) {
+					console.log(error);
+				}
+	
 				
 
 			}

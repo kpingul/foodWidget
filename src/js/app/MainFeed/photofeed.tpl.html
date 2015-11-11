@@ -38,9 +38,9 @@
   </div><!-- end of row -->
 
   <div class="row" style="padding: 45px 0px">
-        <div class="col-xs-12 col-sm-12 col-md-4" ng-repeat="photo in ::vm.images track by $index">   
+        <div class="col-xs-12 col-sm-4 col-md-4" ng-repeat="photo in ::vm.images track by $index">   
           <div class="img-view">
-            <img ng-src="{{photo.images.low_resolution.url}}" class=" img-responsive"/>
+            <img ng-src="{{photo.images.standard_resolution.url}}" class=" img-responsive"/>
             <div class="caption">
                 <div class="content">
                   <p>
@@ -49,7 +49,7 @@
                       <strong class="fa-stack-1x">{{photo.likes.count}}</strong>
                     </span>
                   </p>
-                  <h2>{{photo.created_time | timefilter}}</h2>
+                  <h3>{{photo.created_time | timefilter}}</h3>
                   <p>{{photo.caption.text | captionfilter}}</p>
                 </div>
               </div>
@@ -59,3 +59,37 @@
 
 
 
+  <div class="row highest-rated-section">
+
+    <div class="row">
+      
+     <span class="about-title">Highest Rated Meal</span>
+        <p class="lead"></p>
+
+    </div>
+
+    <div class="row" style="margin-top: 20px">
+      <div class="col-xs-12  col-md-5">
+        <img ng-src="{{vm.highestRated.images.low_resolution.url}}" class="img-circle img-responsive" alt="">
+      </div>
+
+      <div class="col-xs-12 col-md-7" style="    padding: 0px 140px; text-align: center">
+        <h3><span class="highest-rated-desc">Type</span>: <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.categories[0][0]}}</span></h3>
+        <h3><span class="highest-rated-desc">Where</span>: <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.name}}</span></h3>
+        <h3><span class="highest-rated-desc">Location</span>: <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.location.city}}, {{vm.highestRatedRestaurant.location.state_code}}</span></h3>
+        <h3><span class="highest-rated-desc">Rating</span>: <img ng-src="{{vm.highestRatedRestaurant.rating_img_url_large}}" alt=""></h3>
+        <h3><span class="highest-rated-desc">Reviews</span>: <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.reviews[0].user.name}} says: {{vm.highestRatedRestaurant.reviews[0].excerpt}}</span></h3>
+      </div>
+      
+    </div>
+
+
+  </div>
+
+  <div class="footer">
+    <p>
+      <span style="float: left">@Kirck's Food Journey</span>
+      <span style="float: right">Created by Kirck Pingul</span>
+    </p>
+  </div>
+    
