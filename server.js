@@ -1,11 +1,11 @@
-var express = require('express'),
-	bodyParser = require('body-parser'),
-	yelp    = require('yelp'),
-	app     = express(),
-	port    = process.env.PORT || 3000;
+var express	 	= require('express'),
+	bodyParser 	= require('body-parser'),
+	yelp    	= require('yelp'),
+	app     	= express(),
+	port    	= process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/public'));
 
 var yelp = require("yelp").createClient({
   consumer_key: "zbI4z6bbwmxpHCoKLpF0qQ", 

@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 
-# What is Food Widget?
+
+# What is Kirck's Food Journey?
 
 Food widget is a an experiement I created to allow users to view photos from my Instagram account.
 
-<a href="http://kirckpingul.com/foodWidget">Live Demo Here</a>
-
-#Application Folder Structure
-<img src="http://i84.photobucket.com/albums/k34/kdiggz415/foodWidgetFolderStructure.png" />
-
-The folder structure for this application is sorted by features rather by type. This way, it makes it a lot easier to navigate through each file as the application starts to grow so that members on the team can work on their own component without figuring out what is what.
+<a href='https://kircksfoodjourney.herokuapp.com'>Live Demo Here</a>
 
 #Requirements
 
@@ -87,7 +82,6 @@ Since the client application is built using AngularJS and other 3rd party librar
 (This will install the dependencies declared in the /bower.json file)
 
 <b>Package.json</b>
->>>>>>> 5b026e403288b7f12dd202fd5808a62a9b5beb48
 <pre>
 "express": "^4.13.1",
 "gulp": "^3.9.0",
@@ -101,7 +95,6 @@ Since the client application is built using AngularJS and other 3rd party librar
 "karma-jasmine": "^0.3.6"
 </pre>
 
-<<<<<<< HEAD
 <b>Bower.json</b>
 
 <pre>
@@ -115,7 +108,7 @@ Since the client application is built using AngularJS and other 3rd party librar
 
 #Installation
 
-Food Widget can be installed simply by:
+The app can be installed simply by:
 
 <ul>
   <li>Cloning this repo</li>
@@ -130,7 +123,7 @@ Food Widget can be installed simply by:
 
 
 
-=======
+
 * To install our npm dependencies for our build system and server, run: 
 <pre><a href="https://www.npmjs.com">npm</a> install </pre>
 
@@ -190,7 +183,6 @@ angular.module('myApp', [
   <li><a href="https://github.com/codrops/DirectionAwareHoverEffect">Direction Aware Hover Effect</a> which creates the direction-aware hover effect in the main feed.</li>
 </ul>
 
-<<<<<<< HEAD
 #Getting Up and Running
 
 Once you've installed the dependencies, you can:
@@ -211,13 +203,12 @@ The tools I'm using for the unit tests are:
 * <a href="https://github.com/jasmine/jasmine">Jasmine</a>(A behavior-driven development framework for testing JavaScript)
 
 * <a href="http://karma-runner.github.io/0.13/index.html">Karma</a>(Test runner for JavaScript)
->>>>>>> 5b026e403288b7f12dd202fd5808a62a9b5beb48
+
 
 To run the test:
 
 <pre>karma start</pre> 
-<<<<<<< HEAD
-=======
+
 
 ##License
  
