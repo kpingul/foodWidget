@@ -304,6 +304,9 @@ section.cover {
   .highest-rated-desc-1{
     display: block;
   }
+  .meal-title {
+
+    padding-top: 25%;
 }
 
 @media (max-width: 500px) {
@@ -312,9 +315,6 @@ section.cover {
     font-size: 0.9em;
    
 }
-#highest-rated-rating{
-  width: 100%;
-}
-  
+
 }
 
