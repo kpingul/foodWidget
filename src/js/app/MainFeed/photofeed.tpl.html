@@ -69,16 +69,22 @@
     </div>
 
     <div class="row" style="margin-top: 20px">
-      <div class="col-xs-12  col-md-5">
+      <div class="col-xs-12 col-sm-5 col-md-5">
         <img ng-src="{{vm.highestRated.images.low_resolution.url}}" class="img-circle img-responsive" alt="">
       </div>
 
-      <div class="col-xs-12 col-md-7" style="    padding: 0px 140px; text-align: center">
-        <h3><span class="highest-rated-desc">Type</span>: <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.categories[0][0]}}</span></h3>
-        <h3><span class="highest-rated-desc">Where</span>: <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.name}}</span></h3>
-        <h3><span class="highest-rated-desc">Location</span>: <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.location.city}}, {{vm.highestRatedRestaurant.location.state_code}}</span></h3>
-        <h3><span class="highest-rated-desc">Rating</span>: <img ng-src="{{vm.highestRatedRestaurant.rating_img_url_large}}" alt=""></h3>
-        <h3><span class="highest-rated-desc">Reviews</span>: <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.reviews[0].user.name}} says: {{vm.highestRatedRestaurant.reviews[0].excerpt}}</span></h3>
+      <div class="col-xs-12 col-sm-7 col-md-7" style="    padding: 0px 140px; text-align: center">
+
+        <h3><span class="highest-rated-desc">Type:</span> <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.categories[0][0]}}</span></h3>
+
+        <h3><span class="highest-rated-desc">Where:</span> <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.name}}</span></h3>
+
+        <h3><span class="highest-rated-desc">Location:</span> <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.location.city}}, {{vm.highestRatedRestaurant.location.state_code}}</span></h3>
+
+        <h3><span class="highest-rated-desc">Rating:</span> <img ng-src="{{vm.highestRatedRestaurant.rating_img_url_large}}" id="highest-rated-rating" alt=""></h3>
+
+        <h3><span class="highest-rated-desc">Reviews:</span> <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.reviews[0].user.name}} says: {{vm.highestRatedRestaurant.reviews[0].excerpt}}</span></h3>
+
       </div>
       
     </div>
