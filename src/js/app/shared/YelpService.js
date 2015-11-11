@@ -6,7 +6,6 @@
 
 		angular.module('myApp')
 
-
 			.factory('YelpService', ['$http', function($http){
 
 				var service = {

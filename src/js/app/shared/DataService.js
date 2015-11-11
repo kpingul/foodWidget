@@ -18,7 +18,7 @@
 					getHighestRated: getHighestRated
 
 				}
-				var url = 'https://api.instagram.com/v1/users/2078950030/media/recent?access_token=2078950030.1f5c74e.fa614065af4e484d92b96e91332850b0&callback=JSON_CALLBACK&count=30';
+				var url = 'https://api.instagram.com/v1/users/2078950030/media/recent?access_token=2078950030.1f5c74e.fa614065af4e484d92b96e91332850b0&callback=JSON_CALLBACK&count=100';
 				
 				function getHighestRated() {
 	       			return $http
@@ -80,6 +80,7 @@
 					data.data.data.map(function(val, index) {
 						feed.push(val);
 					});
+					console.log(feed);
 					return feed;
 				}
 

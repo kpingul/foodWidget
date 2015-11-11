@@ -1,0 +1,108 @@
+<!-- Fixed Nav -->
+<nav class="navbar navbar-default navbar-fixed-top" id="myScrollspy" scroll>
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="brand" href="">Kirck's Food Journey</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="" id="brand-1">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>  
+<!-- //Close Fixed Nav -->  
+
+<section class="cover" id="spytop">  
+  <div class="container">
+      <p class="meal-title">
+        <span class="meal-count">{{vm.feed.length}}</span> Meals and counting, <span class="meal-count">1</span> Man
+      </p>
+  </div><!-- end of container -->
+</section><!-- end of cover -->
+
+<div class="row">
+   <span class="about-title">Most Recent Meals</span>
+    <p class="lead"></p>
+</div><!-- end of row -->
+
+<div class="row" style="padding: 45px 0px">
+      <div class="col-xs-12 col-sm-4 col-md-4" ng-repeat="photo in ::vm.images track by $index">   
+        <div class="img-view">
+          <img ng-src="{{photo.images.standard_resolution.url}}" class=" img-responsive"/>
+          <div class="caption">
+              <div class="content">
+                <p>
+                  <span class="fa-stack fa-2x">
+                    <i class="fa fa-heart fa-stack-2x"></i>
+                    <strong class="fa-stack-1x">{{photo.likes.count}}</strong>
+                  </span>
+                </p>
+                <h3>{{photo.created_time | timefilter}}</h3>
+                <p>{{photo.caption.text | captionfilter}}</p>
+              </div><!-- end of content -->
+            </div><!-- end of caption -->
+        </div><!-- end of img view -->
+      </div><!-- end of col -->
+</div><!-- end of row -->
+
+<div class="row highest-rated-section">
+  <div class="row">
+   <span class="about-title">Highest Rated Meal</span>
+    <p class="lead"></p>
+  </div><!-- end of row -->
+
+  <div class="row highest-rated-section-1">
+    <div class="col-xs-12 col-sm-5 col-md-5">
+      <img ng-src="{{vm.highestRated.images.low_resolution.url}}" class="img-circle img-responsive" alt="">
+    </div>
+
+    <div class="col-xs-12 col-sm-7 col-md-7 highest-rated-section-2" >
+      <h3>
+        <span class="highest-rated-desc">Type:</span> 
+        <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.categories[0][0]}}</span>
+      </h3>
+
+      <h3>
+        <span class="highest-rated-desc">Where:</span> 
+        <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.name}}</span>
+      </h3>
+
+      <h3>
+        <span class="highest-rated-desc">Location:</span> 
+        <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.location.city}}, {{vm.highestRatedRestaurant.location.state_code}}</span>
+      </h3>
+
+      <h3>
+        <span class="highest-rated-desc">Rating:</span> 
+        <img ng-src="{{vm.highestRatedRestaurant.rating_img_url_large}}" id="highest-rated-rating" alt="">
+      </h3>
+
+      <h3>
+        <span class="highest-rated-desc">Reviews:</span>
+        <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.reviews[0].user.name}} says: {{vm.highestRatedRestaurant.reviews[0].excerpt}}</span>
+      </h3>
+
+    </div><!-- end of highest-rated-section-2 -->
+    
+  </div><!-- end of highest-rated-section-1 -->
+</div><!-- end of highest-rated-section -->
+
+<div class="row most-popular-section">
+   <span class="about-title">Most Popoular Meal</span>
+      <p class="lead"></p>
+</div><!-- end of row -->
+
+<div class="footer">
+  <p>
+    <span style="float: left">@Kirck's Food Journey</span>
+    <span style="float: right">Created by Kirck Pingul</span>
+  </p>
+</div>
+  

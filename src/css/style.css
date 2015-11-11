@@ -4,11 +4,26 @@ Author: Kirck Pingul
 
 ::  1.0 Global
 -------------------------------------------
-    1.1 Overlay state loading spinner
-    1.1 Filter loading spinner
 
-::  2.0 Navigaition Section 
+::  2.0 Bootstrap Changes
 -------------------------------------------
+
+::   3.0 Main Header Section    
+-------------------------------------------
+
+::   4.0 Recent Feed Section    
+-------------------------------------------
+
+::   5.0 Highest Rated Section    
+-------------------------------------------
+
+::   6.0 Most Popular Section    
+-------------------------------------------
+
+::   7.0 Media Queries    
+-------------------------------------------
+::   7.1 768px
+::   7.2 500px
 
 */
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic);
@@ -23,17 +38,6 @@ body {
   background-color: #fff;
 }
 
-.col-xs-4{
-  text-align: center;
-}
-.img-circle{
-  margin: 0 auto;
-
-}
-
-.fa-heart{
-  color: #FFA42D;
-}
 /* ************************************************* */
 /*                 2.0 BootStrap                     */
 /* ************************************************* */
@@ -101,9 +105,15 @@ body {
 .navbar-default .navbar-toggle:hover {
   background: #fff;
 }
+.col-xs-4{
+  text-align: center;
+}
+.img-circle{
+  margin: 0 auto;
 
+}
 /* ************************************************* */
-/*                 2.0 Main Header Section           */
+/*                 3.0 Main Header Section           */
 /* ************************************************* */
 section.cover {
 
@@ -177,13 +187,13 @@ section.cover {
     margin-left:-40px;
 }
 
-/*______________________________*/
-/* 3.1 Recent Feed Hover Effect */
-/*______________________________*/
+/* ************************************************* */
+/*                 4.0 Recent Feed Section           */
+/* ************************************************* */
 
 .img-view {
   width: 100%;
-  height: 228px;
+  height: 35vh;
   margin: 20px auto;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -203,7 +213,7 @@ section.cover {
   color: #fff;
   text-align: center;
   width: 100%;
-  height: 238px;
+  height: 35vh;
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -266,15 +276,23 @@ section.cover {
   transform: scale(1.1);
 }
 
-
-/*______________________________*/
-/* 3.2 Highest Rated  Section   */
-/*______________________________*/
+.fa-heart{
+  color: #FFA42D;
+}
+/* ************************************************* */
+/*                 5.0 Highest Rated Section         */
+/* ************************************************* */
 
 .highest-rated-section{
   background: #FFC477;
   padding-bottom: 60px;
   color: #363636;
+}
+.highest-rated-section-1{
+  margin-top: 30px;
+}
+.highest-rated-section-2{
+  text-align: center;
 }
 .highest-rated-desc{
   color: #34495B;
@@ -282,6 +300,14 @@ section.cover {
 }
 .highest-related-desc-1{
   font-size: 0.75em;
+}
+
+
+/* ************************************************* */
+/*                 6.0 Most Popular Section          */
+/* ************************************************* */
+.most-popular-section{
+  padding-bottom: 60px;
 }
 /* jQuery Styles
 ===================================*/
@@ -296,6 +322,14 @@ section.cover {
     font-size: 1.2em;
     background: #34495B;
 }
+
+
+/* ************************************************* */
+/*                 7.0 Media Queries                 */
+/* ************************************************* */
+
+/* 7.1 Media Query 768px */
+
 @media (max-width: 768px) {
   .highest-rated-desc{
 
@@ -307,14 +341,16 @@ section.cover {
   .meal-title {
 
     padding-top: 25%;
+  }
 }
+
+/* 7.2 Media Query 500px */
 
 @media (max-width: 500px) {
-.footer{
-  padding: 30px 30px;
-    font-size: 0.9em;
-   
-}
-
+  .footer{
+    padding: 30px 30px;
+      font-size: 0.9em;
+     
+  }
 }
 

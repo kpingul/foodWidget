@@ -12,8 +12,7 @@ var gulp 		= require('gulp'),
 
 var paths = {
 
-	bower: 'bower_components/',
-	plugins: 'src/plugins/'
+	bower: 'bower_components/'
 
 }
 
@@ -33,10 +32,7 @@ gulp.task('depsJs', function(){
 			paths.bower + 'angular/angular.min.js',
 			paths.bower + 'angular-ui-router/release/angular-ui-router.min.js',
 			paths.bower + 'jquery/dist/jquery.min.js',
-			paths.bower + 'bootstrap/dist/js/bootstrap.min.js',
-			paths.bower + 'spin.js/spin.js',
-			paths.bower + 'angular-spinner/angular-spinner.js',
-			paths.plugins + 'plugin.js'
+			paths.bower + 'bootstrap/dist/js/bootstrap.min.js'
 
 		])
 
