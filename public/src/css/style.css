@@ -25,6 +25,9 @@ Author: Kirck Pingul
 ::   7.1 768px
 ::   7.2 500px
 
+::   8.0 About Section       
+-------------------------------------------
+       
 */
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic);
 /* ************************************************* */
@@ -37,28 +40,7 @@ body {
   line-height: 1.8;
   background-color: #fff;
 }
-.about-description{
-  color: #fff;
-  font-weight: bold;
-  font-size: 0.5em;
-  display: block;
-}
-.about-description-title{
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-.about-information {
-  color: #555;
 
-}
-.about-me-section{
-  padding: 30px 0px;
-}
-.about-information-desc{
-  width: 50%;
-  margin: 0 auto;
-}
 /* ************************************************* */
 /*                 2.0 BootStrap                     */
 /* ************************************************* */
@@ -77,7 +59,7 @@ body {
   font-style: italic;
 }
 #brand-1{
-  font-size: 1.2em;
+  font-size: 1.6em;
 }
 #brand:hover,
 #brand:active,
@@ -382,3 +364,28 @@ section.cover-about{
   }
 }
 
+/* ************************************************* */
+/*                 8.0 About Section                 */
+/* ************************************************* */
+.about-description{
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.5em;
+  display: block;
+}
+.about-description-title{
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.about-information {
+  color: #555;
+
+}
+.about-me-section{
+  padding: 30px 0px;
+}
+.about-information-desc{
+  width: 50%;
+  margin: 0 auto;
+}
