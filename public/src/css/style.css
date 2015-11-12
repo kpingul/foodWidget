@@ -37,7 +37,28 @@ body {
   line-height: 1.8;
   background-color: #fff;
 }
+.about-description{
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.5em;
+  display: block;
+}
+.about-description-title{
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.about-information {
+  color: #555;
 
+}
+.about-me-section{
+  padding: 30px 0px;
+}
+.about-information-desc{
+  width: 50%;
+  margin: 0 auto;
+}
 /* ************************************************* */
 /*                 2.0 BootStrap                     */
 /* ************************************************* */
@@ -121,6 +142,13 @@ section.cover {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 85vh;
+  display: flex;
+}
+section.cover-about{
+    background: url('../img/about.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 70vh;
   display: flex;
 }
 

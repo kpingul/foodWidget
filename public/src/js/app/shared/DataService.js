@@ -65,7 +65,6 @@
 
 				function handleHighestRatedData(data) {
 					
-
 					return sortHighest(data);
 				}
 
