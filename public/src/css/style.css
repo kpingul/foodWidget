@@ -20,14 +20,14 @@ Author: Kirck Pingul
 ::   6.0 Most Popular Section    
 -------------------------------------------
 
-::   7.0 Media Queries    
--------------------------------------------
-::   7.1 768px
-::   7.2 500px
-
-::   8.0 About Section       
+::   7.0 About Section       
 -------------------------------------------
        
+
+::   8.0 Media Queries    
+-------------------------------------------
+::   8.1 768px
+::   8.2 500px
 */
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic);
 /* ************************************************* */
@@ -333,39 +333,8 @@ section.cover-about{
     background: #34495B;
 }
 
-
 /* ************************************************* */
-/*                 7.0 Media Queries                 */
-/* ************************************************* */
-
-/* 7.1 Media Query 768px */
-
-@media (max-width: 768px) {
-  .highest-rated-desc{
-
-    display: block;
-  }
-  .highest-rated-desc-1{
-    display: block;
-  }
-  .meal-title {
-
-    padding-top: 25%;
-  }
-}
-
-/* 7.2 Media Query 500px */
-
-@media (max-width: 500px) {
-  .footer{
-    padding: 30px 30px;
-      font-size: 0.9em;
-     
-  }
-}
-
-/* ************************************************* */
-/*                 8.0 About Section                 */
+/*                 7.0 About Section                 */
 /* ************************************************* */
 .about-description{
   color: #fff;
@@ -389,3 +358,36 @@ section.cover-about{
   width: 50%;
   margin: 0 auto;
 }
+
+/* ************************************************* */
+/*                 8.0 Media Queries                 */
+/* ************************************************* */
+
+/* 8.1 Media Query 768px */
+
+@media (max-width: 768px) {
+  .highest-rated-desc{
+
+    display: block;
+  }
+  .highest-rated-desc-1{
+    display: block;
+  }
+  .meal-title {
+
+    padding-top: 25%;
+  }
+}
+
+/* 8.2 Media Query 500px */
+
+@media (max-width: 500px) {
+  .footer{
+    padding: 30px 30px;
+      font-size: 0.9em;  
+  }
+  .about-information-desc{
+    width: 100%;
+  }
+}
+
