@@ -17,7 +17,7 @@
 
 				function getHighestRated(lat, lng, name) {
 					service.name = name;
-					console.log(name);
+
 					return $http.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + lng + '&key=AIzaSyDlRrrjWcF9m_xqqDyPeVbEf8f2tFuUDjk')
 						.then(handleLocation)
 						.then(handleYelpBusiness)
@@ -41,7 +41,7 @@
 							});
 						}
 					});
-					console.log(cityName);
+
 					return cityName;
 				}
 

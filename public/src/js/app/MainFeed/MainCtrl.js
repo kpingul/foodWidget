@@ -8,16 +8,18 @@
 
 			.controller('MainCtrl', MainCtrl);
 
-			MainCtrl.$inject = ['$scope', 'RecentFeed', 'MainFeed', 'HighestRated', 'YelpService'];
+			MainCtrl.$inject = ['$scope', 'RecentFeed', 'MainFeed', 'HighestRated', 'YelpService', 'dataService', '$http'];
 
-			function MainCtrl($scope, RecentFeed, MainFeed, HighestRated, YelpService){
-			
+			function MainCtrl($scope, RecentFeed, MainFeed, HighestRated, YelpService, dataService, $http){
+
+	
 				var vm = this;
 				vm.images = RecentFeed;
 				vm.feed = MainFeed;
 				vm.highestRated = HighestRated;
 				vm.highestRatedRestaurant = {};
-				
+				dataService.getTotalMeals();
+
 				getYelp(vm.highestRated.location.latitude, vm.highestRated.location.longitude, vm.highestRated.location.name);
 
 				function getYelp(lat, lng, name) {
@@ -37,8 +39,7 @@
 				function handleError(error) {
 					console.log(error);
 				}
-	
-				
+			
 
 			}
 

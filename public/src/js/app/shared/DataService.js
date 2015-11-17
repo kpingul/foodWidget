@@ -15,7 +15,9 @@
 
 					getRecentFeed: getRecentFeed,
 
-					getHighestRated: getHighestRated
+					getHighestRated: getHighestRated,
+
+					getTotalMeals: getTotalMeals
 
 				}
 				var url = 'https://api.instagram.com/v1/users/2078950030/media/recent?access_token=2078950030.1f5c74e.fa614065af4e484d92b96e91332850b0&callback=JSON_CALLBACK&count=100';
@@ -36,12 +38,8 @@
 				function getFeed() {
 	       			return $http
 	       				.jsonp(url)
-						.then(handleFeed)
+						.then(handleFeedData)
 						.catch(handleError);
-
-					function handleFeed(data) {
-						return handleFeedData(data);
-					}
 
 					
 				}
@@ -51,13 +49,8 @@
 					//$HTTP returns promise
 	       			return $http
 	       				.jsonp(url)
-						.then(handleRecentFeed)
+						.then(handleRecentFeedData)
 						.catch(handleError);
-
-					function handleRecentFeed(data) {
-						return handleRecentFeedData(data);
-
-					}
 
 				}
 
@@ -113,6 +106,81 @@
 					}
 					return highest[0];
 
+				}
+
+
+				function getTotalMeals() {
+
+					$http
+						.jsonp('https://api.instagram.com/v1/users/2078950030/media/recent?access_token=2078950030.1f5c74e.fa614065af4e484d92b96e91332850b0&callback=JSON_CALLBACK&count=50')
+						.then(function(response) {
+							var	monthVal 	= ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+							var months = {
+								January: 0,
+								Febuary: 0,
+								March: 0,
+								April: 0,
+								May: 0,
+								June: 0,
+								July: 0,
+								August: 0,
+								September: 0,
+								October: 0,
+								November: 0,
+								December: 0
+
+							}
+							var dates = [];
+							var stamps = {};
+							var finalMonths = [];
+							var finalData = [];
+							response.data.data.map(function(val, index) {
+								if( val.created_time ) {
+									var time = new Date(parseInt(val.created_time * 1000)),
+									month 	= (time.getMonth() + 1),
+									day 	= (time.getDate()),
+									year 	= (time.getFullYear());
+
+
+									dates.push(monthVal[month - 1]);
+								}
+							});
+							
+
+							dates.map(function(month, index) {
+								if(!stamps[month]){
+									stamps[month] = [];
+								}
+								stamps[month].push(true);
+							});
+
+							for( var property in stamps ) {
+								
+								finalMonths.push(property);
+								finalData.push(stamps[property].length);
+
+							}
+
+
+							var data = {
+							    labels: finalMonths.reverse(),
+							    datasets: [
+							        {
+							            label: "My First dataset",
+							            fillColor: "rgba(255,164,45, 0.8)",
+							            strokeColor: "rgba(255,164,45, 0.3))",
+							            highlightFill: "rgba(255,164,45, 0.3)",
+							            highlightStroke: "rgba(255,164,45, 0.5)",
+							            data: finalData.reverse()
+							        }
+							    ]
+							};
+							var ctx = document.getElementById("myChart").getContext("2d");
+							var myBarChart = new Chart(ctx).Bar(data, {
+								responsive: true
+							});
+						});
+	
 				}
 
 				return service;
