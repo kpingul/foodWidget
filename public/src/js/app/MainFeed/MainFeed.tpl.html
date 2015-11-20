@@ -81,12 +81,12 @@
       </h3>
 
       <h3>
-        <span class="highest-rated-desc">Rating:</span> 
+        <span class="highest-rated-desc">Yelp Rating:</span> 
         <img ng-src="{{vm.highestRatedRestaurant.rating_img_url_large}}" id="highest-rated-rating" alt="">
       </h3>
 
       <h3>
-        <span class="highest-rated-desc">Reviews:</span>
+        <span class="highest-rated-desc">Yelp Review:</span>
         <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.reviews[0].user.name}} says: {{vm.highestRatedRestaurant.reviews[0].excerpt}}</span>
       </h3>
 
@@ -95,31 +95,48 @@
   </div><!-- end of highest-rated-section-1 -->
 </div><!-- end of highest-rated-section -->
 
-<!-- <div class="row ">
-  <span class="about-title">Most Popular Liker</span>
-    <p class="lead"></p>
+<div class="row ">
 
-    <div class="col-md-8">
-      <h1>
-        {{vm.mostLiked.liked.length}}
-      </h1>
-    </div>
+  <div class="row">
+    
+    <span class="about-title">Most Popular Liker</span>
+      <p class="lead"></p>
+    
+  </div>
 
-    <div class="col-md-4">
-      <h2>
+  <div class="row" style="padding: 60px 0px">
+    
+    <div class="col-md-6">
+
+      <center>
+        <h1>
         {{vm.mostLiked.username}}
-      </h2>
-      
+      </h1>
       <p>
         <img ng-src="{{vm.mostLiked.img}}" alt="" class="img-circle">
       </p>
-      
+    </center>
+
     </div>
 
+    <div class="col-md-6">
+
+    
+        <ul style="list-style: none; padding: 0; text-align: center">
+          <li style="display: inline" ng-repeat="photo in vm.mostLiked.images">
+            <img ng-src="{{photo}}" width=80 height=80 alt="">
+          </li>
+        </ul>   
+   
+    </div>
+
+  </div>
+
+
 </div>
- -->
-<div class="row ">
-  <span class="about-title">Meals Per Month Since I Joined</span>
+
+<div class="row highest-rated-section">
+  <span class="about-title">Meals Since I Joined</span>
     <p class="lead"></p>
     <div class="col-md-12">
       <div class="chart-container">

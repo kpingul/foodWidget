@@ -167,10 +167,10 @@
 							    datasets: [
 							        {
 							            label: "My First dataset",
-							            fillColor: "rgba(255,164,45, 0.8)",
-							            strokeColor: "rgba(255,164,45, 0.3))",
-							            highlightFill: "rgba(255,164,45, 0.3)",
-							            highlightStroke: "rgba(255,164,45, 0.5)",
+							            fillColor: "rgba(52,73,91,.9)",
+							            strokeColor: "rgba(52,73,91,.3)",
+							            highlightFill: "rgba(52,73,91,.3)",
+							            highlightStroke: "rgba(52,73,91,.3)",
 							            data: finalData.reverse()
 							        }
 							    ]
