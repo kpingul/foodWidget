@@ -78,6 +78,25 @@
 
 
 						}
+					],
+					MostLiked: ['dataService',
+						function(dataService) {
+
+							return dataService
+								.getPopularLiker()
+								.then(handleData)
+								.catch(handleError);
+
+							function handleData(data) {
+								return data;
+							}
+
+							function handleError(error) {
+								return error;
+							}
+
+
+						}
 					]
 				}
 			})

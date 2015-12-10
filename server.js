@@ -34,7 +34,10 @@ app.get('/api/yelp/business/:businessId', function( req, res ) {
 
 app.get('/about', function(req, res) {
 	res.render('about');
+});
 
+app.get('/', function(req, res) {
+	res.render('index');
 });
 
 app.listen(port);

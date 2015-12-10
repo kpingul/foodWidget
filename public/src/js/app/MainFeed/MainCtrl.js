@@ -8,18 +8,20 @@
 
 	.controller('MainCtrl', MainCtrl);
 
-	MainCtrl.$inject = ['$scope', 'RecentFeed', 'MainFeed', 'HighestRated', 'YelpService', 'dataService', '$http'];
+	MainCtrl.$inject = ['$scope', 'RecentFeed', 'MainFeed', 'HighestRated', 'YelpService', 'dataService', 'MostLiked'];
 
-	function MainCtrl($scope, RecentFeed, MainFeed, HighestRated, YelpService, dataService, $http) {
+	function MainCtrl($scope, RecentFeed, MainFeed, HighestRated, YelpService, dataService, MostLiked) {
 
 
 		var vm = this;
 		vm.images = RecentFeed;
 		vm.feed = MainFeed;
 		vm.highestRated = HighestRated;
+		console.log(vm.highestRated);
 		vm.highestRatedRestaurant = {};
-		vm.mostLiked = {};
+		vm.mostLiked = MostLiked;
 		dataService.getTotalMeals();
+
 
 		getYelp(vm.highestRated.location.latitude, vm.highestRated.location.longitude, vm.highestRated.location.name);
 
@@ -32,7 +34,6 @@
 		}
 
 		function handleYelpData(data) {
-			console.log(data);
 			vm.highestRatedRestaurant = data;
 
 		}
@@ -41,53 +42,6 @@
 			console.log(error);
 		}
 
-
-		$http
-			.jsonp('https://api.instagram.com/v1/users/2078950030/media/recent?access_token=2078950030.1f5c74e.fa614065af4e484d92b96e91332850b0&callback=JSON_CALLBACK&count=50')
-			.then(function(response) {
-				var likers = {};
-				var mostLiked = {
-					username: response.data.data[0].likes.data[0].username,
-					img: response.data.data[0].likes.data[0].profile_picture,
-					liked: [],
-					images: []
-				}
-				response.data.data.map(function(photo, index) {
-
-
-					photo.likes.data.forEach(function(liker, index) {
-						if (!likers[liker.username]) {
-							likers[liker.username] = {
-								username: liker.username ? liker.username : '',
-								img: liker.profile_picture,
-								liked: [],
-								images: []
-							};
-						}
-						likers[liker.username].liked.push(true);
-					});
-				});
-
-				for (var prop in likers) {
-					if (mostLiked['liked'].length < likers[prop]['liked'].length) {
-						mostLiked = likers[prop]
-					}
-				}
-
-
-
-				response.data.data.map(function(photos, index) {
-					photos.likes.data.forEach(function(user, index) {
-						if (mostLiked.username === user.username) {
-							mostLiked.images.push(photos.images.low_resolution.url)
-						}
-					});
-				});
-
-
-				vm.mostLiked = mostLiked;
-
-			});
 
 
 	}

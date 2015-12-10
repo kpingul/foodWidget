@@ -23,7 +23,7 @@
 <section class="cover" id="spytop">  
   <div class="container">
       <p class="meal-title">
-        <span class="meal-count">{{vm.feed.length}}</span> Meals and counting, <span class="meal-count">1</span> Man
+        <span class="meal-count"><a style="color: #FFA42D" href="http://instagram.com/kgp_415">{{vm.feed.length}}</a></span> Meals and counting, <span class="meal-count">1</span> Man
       </p>
   </div><!-- end of container -->
 </section><!-- end of cover -->
@@ -55,7 +55,7 @@
 
 <div class="row highest-rated-section">
   <div class="row">
-   <span class="about-title">Highest Rated Meal</span>
+   <span class="about-title">Most Liked Meal</span>
     <p class="lead"></p>
   </div><!-- end of row -->
 
@@ -68,6 +68,16 @@
       <h3>
         <span class="highest-rated-desc">Type:</span> 
         <span class="highest-related-desc-1">{{vm.highestRatedRestaurant.categories[0][0]}}</span>
+      </h3> 
+      <h3>
+        <span class="highest-rated-desc">Total Likes:</span> 
+        <span class="highest-related-desc-1">{{vm.highestRated.likes.count}}</span>
+      </h3>      
+      <h3>
+        <span class="highest-rated-desc">Hash Tags:</span> 
+        <span class="highest-related-desc-1" ng-repeat="tag in vm.highestRated.tags track by $index">
+          #{{tag}} 
+        </span>
       </h3>
 
       <h3>
