@@ -1,5 +1,5 @@
 =======
-#<a href="http://angularjs.org">AngularJS</a> Application
+#Kirck's Food Journey Application 
 
 ***
 
